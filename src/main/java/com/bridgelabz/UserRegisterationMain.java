@@ -11,6 +11,7 @@ public class UserRegisterationMain {
 
             System.out.println("Enter your choice: ");
             System.out.println("1: Validate name.");
+            System.out.println("2: Validate last name.");
             System.out.println("0: Exit.");
             choice = input.nextInt();
 
@@ -18,7 +19,9 @@ public class UserRegisterationMain {
                 case 1:
                     UserRegistration.validateFirstName();
                     break;
-
+                case 2:
+                    UserRegistration.validateLastName();
+                    break;
                 default:
                     System.out.println("Enter valid input.");
             }
