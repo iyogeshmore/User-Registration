@@ -36,5 +36,18 @@ public class UserRegistration {
         else
             System.out.println("It is invalid last name.");
     }
+    public static void validateEmail(){
+        System.out.println("Enter your E-mail: ");
+        String email = sc.next();
+        String regex2 = "^[a-zA-Z0-9]+([.][A-Za-z]+)*@[a-zA-Z]+[.]+[a-zA-Z]{2,3}+([.][A-Za-z]+)*$";
+        // {1,}^[a-z]+[0-9]+[@]+gmail.com
+        Pattern pattern2 = Pattern.compile(regex2);
+        Matcher matcher2 = pattern2.matcher(email);
+        boolean r = matcher2.matches();
 
+        if (r)
+            System.out.println("It is a valid E-mail.");
+        else
+            System.out.println("It is invalid E-mail.");
+    }
 }
