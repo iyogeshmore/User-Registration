@@ -138,11 +138,23 @@ public class UserRegistration {
             System.out.println("Invalid G-mail Address");
     }
 
+    //Junit UC1: Take First Name And Check It Is Getting Matched With Regex/Regular
+
     public boolean validateFirstName(String fname) {
         String regex="^[A-Z]{1}[a-z]*";
         Pattern p=Pattern.compile(regex);
         Matcher m=p.matcher(fname);
         boolean r=m.matches();
+        return r;
+    }
+
+    //Junit UC2: Take Last Name And Check It Is Getting Matched With Regex/Regular
+
+    public boolean validateLastName(String lName) {
+        String regex1 = "^[A-Z]{1}[a-z]{2,}$";
+        Pattern pattern1 = Pattern.compile(regex1);
+        Matcher matcher1 = pattern1.matcher(lName);
+        boolean r = matcher1.matches();
         return r;
     }
 }
