@@ -157,4 +157,15 @@ public class UserRegistration {
         boolean r = matcher1.matches();
         return r;
     }
+
+    //Junit UC3: Take Email And Check It Is Getting Matched With Regex/Regular
+
+    public boolean validateEmail(String email) {
+        String regex2 = "^[a-zA-Z0-9]+([.][A-Za-z]+)*@[a-zA-Z]+[.]+[a-zA-Z]{2,3}+([.][A-Za-z]+)*$";
+        // {1,}^[a-z]+[0-9]+[@]+gmail.com
+        Pattern pattern2 = Pattern.compile(regex2);
+        Matcher matcher2 = pattern2.matcher(email);
+        boolean r = matcher2.matches();
+        return r;
+    }
 }
