@@ -200,11 +200,25 @@ public class UserRegistration {
         return r;
     }
 
+    //Junit UC7: Take Password (Password At least one Upper case and one numeric) And
+    // Check It Is Getting Matched With Regex/Regular
+
     public boolean validatePasswordRule3(String password) {
         String regex6 = "^[A-Z]{1}+[a-zA-Z]{6}+[0-9]+{1,}$";
         Pattern pattern6 = Pattern.compile(regex6);
         Matcher matcher6 = pattern6.matcher(password);
         boolean r = matcher6.matches();
+        return r;
+    }
+
+    //Junit UC8: Take Password (Password At least One Upper Case & One Numeric & One Special Character) And
+    // Check It Is Getting Matched With Regex/Regular
+
+    public boolean validatePasswordRule4(String password) {
+        String regex7 = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*#?&])[A-Za-z0-9@$!%*?&]{5,}$";
+        Pattern pattern7 = Pattern.compile(regex7);
+        Matcher matcher7 = pattern7.matcher(password);
+        boolean r = matcher7.matches();
         return r;
     }
 }
