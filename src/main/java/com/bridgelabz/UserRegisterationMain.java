@@ -16,6 +16,7 @@ public class UserRegisterationMain {
             System.out.println("4: Validate Mobile Number.");
             System.out.println("5: Validate Password Rule1");
             System.out.println("6: Validate Password Rule2");
+            System.out.println("7: Validate Password Rule3");
             System.out.println("0: Exit.");
             choice = input.nextInt();
 
@@ -37,6 +38,9 @@ public class UserRegisterationMain {
                     break;
                 case 6:
                     UserRegistration.validatePasswordRule2();
+                    break;
+                case 7:
+                    UserRegistration.validatePasswordRule3();
                     break;
                 default:
                     System.out.println("Enter valid input.");
