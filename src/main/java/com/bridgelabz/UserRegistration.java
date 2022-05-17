@@ -137,4 +137,12 @@ public class UserRegistration {
         else
             System.out.println("Invalid G-mail Address");
     }
+
+    public boolean validateFirstName(String fname) {
+        String regex="^[A-Z]{1}[a-z]*";
+        Pattern p=Pattern.compile(regex);
+        Matcher m=p.matcher(fname);
+        boolean r=m.matches();
+        return r;
+    }
 }
