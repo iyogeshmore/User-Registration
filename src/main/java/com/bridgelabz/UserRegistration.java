@@ -50,4 +50,18 @@ public class UserRegistration {
         else
             System.out.println("It is invalid E-mail.");
     }
+    public static void validateMobileNumber(){
+        System.out.println("Enter your mobile number: ");
+        String mobileNo = sc.next();
+        String regex3 = "(91|0)?\\s?[6-9][0-9]{9}$";
+
+        Pattern pattern3 = Pattern.compile(regex3);
+        Matcher matcher3 = pattern3.matcher(mobileNo);
+        boolean r = matcher3.matches();
+
+        if (r)
+            System.out.println("It is a valid Mobile Number.");
+        else
+            System.out.println("It is invalid Mobile Number.");
+    }
 }
