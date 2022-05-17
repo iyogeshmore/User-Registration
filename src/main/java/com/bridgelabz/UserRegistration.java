@@ -188,4 +188,15 @@ public class UserRegistration {
         boolean r = matcher4.matches();
         return r;
     }
+
+    //Junit UC6: Take Password (Password At least Eight Character one Upper case) And
+    // Check It Is Getting Matched With Regex/Regular
+
+    public boolean validatePasswordRule2(String password) {
+        String regex5 = "^[A-Z]{1}+[a-z 0-9]{7,}$";
+        Pattern pattern5 = Pattern.compile(regex5);
+        Matcher matcher5 = pattern5.matcher(password);
+        boolean r = matcher5.matches();
+        return r;
+    }
 }
