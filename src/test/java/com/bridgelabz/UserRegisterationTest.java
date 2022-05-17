@@ -61,5 +61,4 @@ public void givenemailSamples_WhenProper_ShouldReturnTrue(){
     boolean result = userRegistration.emailSamples("Yogesh2021998@gmail.com");
     Assertions.assertTrue(result);
 }
-
 }
