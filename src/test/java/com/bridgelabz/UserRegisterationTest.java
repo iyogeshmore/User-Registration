@@ -55,11 +55,5 @@ public class UserRegisterationTest {
         boolean result = userRegistration.validatePasswordRule4("Yogesh@1998");
         Assertions.assertTrue(result);
     }
-@Test
-public void givenemailSamples_WhenProper_ShouldReturnTrue(){
-    UserRegistration userRegistration = new UserRegistration();
-    boolean result = userRegistration.emailSamples("Yogesh2021998@gmail.com");
-    Assertions.assertTrue(result);
-}
 
 }
