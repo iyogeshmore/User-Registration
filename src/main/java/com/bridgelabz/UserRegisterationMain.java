@@ -33,6 +33,7 @@ public class UserRegisterationMain {
                     break;
                 case 5:
                     UserRegistration.validatePasswordRule1();
+                    break;
                 default:
                     System.out.println("Enter valid input.");
             }
